@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste JS 02</title>
+    <title>Teste JS 03</title>
     <script>
-        function acendeLampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-acesa.jpg";
-        }
-        function apagaLampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-apagada.jpg";
-        }
-        function quebralampada() {
-            document.getElementById("Luz").src = "_imagens/lampada-quebrada.jpg";
+        var quebrada = false;
+        function mudaLampada(tipo) {
+            if (!quebrada) {
+                document.getElementById("Luz").src = "_imagens/"+ tipo +".jpg";
+                if (tipo == 'lampada-quebrada') {
+                quebrada = true;
+                }
+            }
         }
     </script>
 </head>
 <body>
    <h1>Ascenda a Lâmpada</h1>
-   <img src="_imagens/lampada-apagada.jpg" id="Luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebralampada()"/>
-    <script>
-        
-    </script>
+   <img src="_imagens/lampada-apagada.jpg" id="Luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
 </body>
 </html>
