@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(../_fonts/bubblegum-sans-regular.otf);
+    }
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/*formatação especial tamanho tela*/
+@media screen and (max-width: 768px) {
+    section#corpo {
+        flex-direction: column; /* Empilha os elementos */
+    }
+    article#conteudo-principal,
+    /*aside#lateral {
+        width: 100%; /* Ocupa toda a largura disponível} */
+    header#cabecalho {
+        background-position: 0px 50px;
+    }
+    nav#Menu ul {
+        flex-direction: column;
+        position: static;
+        gap: 10px;
+    }
+}
+/*formatação do body*/
+body {
+    background-color: #cecece;
+
+}
+/*Formatação do Página*/
+div#interface {
+    width: 90%;
+    max-width: 1200px;
+    margin: -10px auto;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 8px RGBA(0,0,0,0.5);
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Formatação do cabeçalho*/
+header#cabecalho {
+    position: relative;
+    border-bottom: 1px solid #606060;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 90px;
+    }
+header#cabecalho hgroup h1 {
+    font-family: 'FonteLogo', cursive;
+    font-size: 30pt;
+    color: #606060;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px RGBA(0,0,0,0.3);
+}
+/*Formatação da notícia*/
+section#corpo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+article#noticiaPrincipal {
+    flex: 2;
+    min-width: 300px;
+    }
+/*Formatação do Menu*/
+nav#Menu {
+    display: block;
+    }
+nav#Menu ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    margin-right: 150px;
+    gap: 10px;
+}
